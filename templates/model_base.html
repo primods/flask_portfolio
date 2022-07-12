@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{{super()}}
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <h1>
+            {% block title_model %}
+            {% endblock %}
+        </h1>
+    </div>
+    <br class="md">
+    <div class="row">
+        <div class="container col-md-8">
+            <p>
+                {% block subtitle %}
+                {% endblock %}
+            </p>
+            {% block model_content %}
+            {% endblock %}
+        </div>
+        <div class="col-6 col-md-4">
+            <div class="card">
+                <div class="card-header text-white">
+                  {% block card_header %}
+                  {% endblock %}
+                </div>
+                <div class="card-body text-dark bg-light">
+                  <h5 class="card-title">
+                    {% block titlecard %}
+                    {% endblock %}
+                  </h5>
+                  <p class="card-text">
+                    {% block card_content %}
+                    {% endblock %}
+                  </p>
+                  {% block button %}
+                  {% endblock %}
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

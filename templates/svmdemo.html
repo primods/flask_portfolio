@@ -1,0 +1,64 @@
+{% extends 'model_base.html' %}
+
+{{super()}}
+
+{% block title_model %} 
+Support-Vector Machine: Demo
+{% endblock %}
+
+{% block subtitle %}
+Dataset: Hepatitis C <a href="https://archive.ics.uci.edu/ml/datasets/HCV+data">[1]</a>
+{% endblock %}
+
+{% block model_content %}
+<form method="POST">
+    {{template_form.hidden_tag()}}
+    <p>
+        {{template_form.CHL.label}}
+        {{template_form.CHL()}}
+    </p>
+    <p>
+        {{template_form.CHE.label}}
+        {{template_form.CHE()}}
+    </p>
+    <p>
+        {{template_form.ALB.label}}
+        {{template_form.ALB()}}
+    </p>
+    <p>
+        {{template_form.ALP.label}}
+        {{template_form.ALP()}}
+    </p>
+    <p>
+        {{template_form.PRO.label}}
+        {{template_form.PRO()}}
+    </p>
+    <p>
+        {{template_form.AST.label}}
+        {{template_form.AST()}}
+    </p>
+    <p>{{template_form.BIL.label}}
+        {{template_form.BIL()}}</p>
+    <p>
+        {{template_form.Age.label}}
+        {{template_form.Age()}}
+    </p>
+
+    <p>
+        {{template_form.submit()}}
+    </p>
+</form>
+{% endblock %}
+
+{% block card_header %}
+What's SVM?
+{% endblock %}
+
+{% block titlecard %}
+Support-Vector Machine
+{% endblock %}
+
+{% block card_content %}
+SVM works by mapping data to a high-dimensional feature space so that data points can be categorized, even when the data are not otherwise linearly separable. A separator between the categories is found, then the data are transformed in such a way that the separator could be drawn as a hyperplane. Following this, characteristics of new data can be used to predict the group to which a new record should belong.<a class="link-info" href="https://www.ibm.com/docs/it/spss-modeler/SaaS?topic=models-how-svm-works">[1]</a>
+
+{% endblock %}

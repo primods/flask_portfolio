@@ -1,0 +1,77 @@
+{% from 'bootstrap5/nav.html' import render_nav_item %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block head %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% block styles %}
+
+    {{ bootstrap.load_css() }}
+    {% endblock %}
+    
+    <title>My portfolio Page!</title>
+    {% endblock %}
+</head>
+
+<nav class="navbar nav-tabs">
+    <div class="nav-item fs-5">
+        {{ render_nav_item('home', 'Home') }}
+    </div>
+    <div class="nav">
+        <div class="dropdown">
+            <a class="nav-link dropdown-toggle fs-6" data-bs-toggle="dropdown" href="#" role="button">
+                ML Models
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item fs-6" href="/linear">Linear Regression</a></li>
+                <li><a class="dropdown-item fs-6" href="/svm">SVM Model</a></li>
+                <li><a class="dropdown-item fs-6" href="/neuralnet">Simple neural network</a></li>
+            </ul>
+        </div>
+        <div class="nav-item">
+            {{ render_nav_item('about','About me') }}
+        </div>
+    </div>
+    
+</nav>
+
+
+<body>
+    {% block scripts %}
+    
+    {{ bootstrap.load_js() }}
+    
+    {% endblock %}
+    <br class="xl">
+    {% block content %}
+
+
+    {% endblock %}
+    
+</body>
+<br class="xl">
+<br class="xl">
+<br class="xl">
+<br class="xl">
+<br class="xl">
+<br class="xl">
+<br class="xl">
+<footer class="fixed-bottom bg-secondary text-gray fst-italic">
+    <div class="container-fluid">
+        <div class="row">
+            <p class="p-2 text-xl-start col-md-auto">
+                by Primo Dothé Sagahón
+            </p>
+            <div class="p-2 col-md-auto">
+                <p class="badge bg-light text-dark">My Github</p>
+                <p class="badge bg-info text-dark">My Facebook </p>
+                <p class="badge bg-success text-dark">My LinkedIn</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

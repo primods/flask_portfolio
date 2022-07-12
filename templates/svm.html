@@ -1,0 +1,32 @@
+{% extends 'model_base.html' %}
+
+{{super()}}
+
+{% block title_model %} 
+Support-Vector Machine: Study Case
+{% endblock %}
+
+{% block subtitle %}
+Dataset:
+{% endblock %}
+
+{% block model_content %}
+LOREM IPSUM
+{% endblock %}
+
+{% block card_header %}
+What's SVM?
+{% endblock %}
+
+{% block titlecard %}
+Support-Vector Machine
+{% endblock %}
+
+{% block card_content %}
+SVM works by mapping data to a high-dimensional feature space so that data points can be categorized, even when the data are not otherwise linearly separable. A separator between the categories is found, then the data are transformed in such a way that the separator could be drawn as a hyperplane. Following this, characteristics of new data can be used to predict the group to which a new record should belong.<a class="link-info" href="https://www.ibm.com/docs/it/spss-modeler/SaaS?topic=models-how-svm-works">[1]</a>
+
+{% endblock %}
+
+{% block button %}
+<a href="/svmdemo" class="btn btn-primary">Demo</a>
+{% endblock %}

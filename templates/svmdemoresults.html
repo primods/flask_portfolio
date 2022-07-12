@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{{super()}}
+
+{% block content %}
+<div class="container">
+    <h2>
+        According to the SVM Model
+    </h2>
+</div>
+<div class="container">
+    <p>
+        This person has {{category}} (Blue point).
+    </p>
+    <br>
+    <h3>Decision Regions:</h3>
+    <img class="img-fluid" src="{{url_for('static', filename='datasvm.png')}}">
+</div>
+{% endblock %}
