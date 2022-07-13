@@ -55,7 +55,7 @@ Dataset: Hepatitis C <a href="https://www.kaggle.com/datasets/fedesoriano/hepati
     for p-dimensional data. Since multiple hyperplanes can be generated for the same model, how we choose the best? The solution relies in the maximal margin hyperplane (or optimal separating hyperplane), solution to the next optimization problem:
     $$ \max\limits_{\beta_0,\beta_1,...,\beta_n,M} M $$
     $$ \text{subject to} \sum_{j=1}^p \beta_j^2 = 1 $$
-    $$ y_i(\beta_0 + \beta_1 x_i1 + \beta_2 x_i2 + ... + \beta_p x_ip = 0) \geq \forall i = 1,...,n  $$
+    $$ y_i(\beta_0 + \beta_1 x_i1 + \beta_2 x_i2 + ... + \beta_p x_ip = 0) \geq M \forall i = 1,...,n  $$
     the last equation ensuring that every observations is on the correct side of the boundary, and the second makes a minimum distance M to the hyperplane. The full ensemble for SVM involves kernels (vg. radial, polynomial, etc) to tackle non-linear problems, and optimization problems accord to it. Thankfully to Sklearn the mathematical concerns about creating a model tends to minimize.
 </p>
 <br>
@@ -71,13 +71,28 @@ Dataset: Hepatitis C <a href="https://www.kaggle.com/datasets/fedesoriano/hepati
 </ol>
 <p>After processing the data, looks like now is linearly separable.</p>
 <img class="img-fluid" src="{{url_for('static', filename='plotsvm.png')}}">
-<p>The last step is train the SVM model and generate the metrics for asses the genealization of the model</p>
+<p>The last step is train the SVM model and generate the metrics to assess the generalization of the model</p>
 <br>
-<h5>Metrics for the SVM classification problem</h5>
+<h5>Metrics for the SVM classification problem:</h5>
 <p>
+    In the Test data the Confusion matrix was the next
+</p>
+<a>
 
+</a>
+<p>
+    The F1-score  for the xxx category was xxxx, and for the xxxx was xxx. The specificity was xxx, and the sensitivity was xxx, meaning that the model generalizes better the XXX category.
+</p>
+<br>
+<h5>
+    Conclusions:
+</h5>
+<p>
+    XXXXX
 </p>
 <h3>LOREM IPSUM</h3>
+<br>
+<br>
 {% endblock %}
 
 {% block card_header %}
