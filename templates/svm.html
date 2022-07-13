@@ -77,24 +77,26 @@ Dataset: Hepatitis C <a href="https://www.kaggle.com/datasets/fedesoriano/hepati
 <p>
     In the Test data the Confusion matrix was the next
 </p>
-<a>
-
-</a>
+<img class="img-fluid" src="{{url_for('static', filename='cmsvm.png')}}">
 <p>
-    The F1-score  for the xxx category was xxxx, and for the xxxx was xxx. The specificity was xxx, and the sensitivity was xxx, meaning that the model generalizes better the XXX category.
+    The F1-score  for the Healthy category was 0.96, and for the Disease category was 0.62.That means that the model generalizes better the Healthy category than the Disease category (False dicovery rate of 0.0075 vs 0.52).
 </p>
 <br>
 <h5>
     Conclusions:
 </h5>
 <p>
-    XXXXX
+    The model excels in the prediction of healthy patients, but if the person has not a hepatic disease the model could be fail assigning a category (False negative). The model can be improved, here are some ideas:
+    <ul>
+        <li>Under sampling and oversampling</li>
+        <li>Change the umbral of classes (v.g. Early stage of the disease vs Terminal disease)</li>
+        <li>Recolect mode data</li>
+    </ul> 
+    The code is available in github<a href="https://github.com/primods/Hepatitis_SVM" target="_external">[3]</a> and you can found a demo for demostrative purposes in the button of the lateral card.
 </p>
 <br>
 <h5>References</h5>
-<p>\(\text{}^1\) BOOKAUTHOR.REFERENCE.XXX</p>
-<br>
-<h3>LOREM IPSUM</h3>
+<p class="fst-italic">\(\text{}^1\) James G, Witten D, Hastie T, Tibshirani R. An Introduction to Statistical Learning. 2nd ed. Springer New York; 2021.</p>
 <br>
 <br>
 {% endblock %}
