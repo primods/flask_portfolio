@@ -56,18 +56,27 @@ Dataset: Hepatitis C <a href="https://www.kaggle.com/datasets/fedesoriano/hepati
     $$ \max\limits_{\beta_0,\beta_1,...,\beta_n,M} M $$
     $$ \text{subject to} \sum_{j=1}^p \beta_j^2 = 1 $$
     $$ y_i(\beta_0 + \beta_1 x_i1 + \beta_2 x_i2 + ... + \beta_p x_ip = 0) \geq \forall i = 1,...,n  $$
-    the last equation ensuring that every observations is on the correct side of the boundary, and the second makes a minimum distance M to the hyperplane. The full ensemble for SVM involves kernels (vg. radial, polynomial, etc) to tackle non-linear problems and optimization problems accord to it. Thankfully to Sklearn the mathematical concerns about creating a model tends to minimize.
+    the last equation ensuring that every observations is on the correct side of the boundary, and the second makes a minimum distance M to the hyperplane. The full ensemble for SVM involves kernels (vg. radial, polynomial, etc) to tackle non-linear problems, and optimization problems accord to it. Thankfully to Sklearn the mathematical concerns about creating a model tends to minimize.
 </p>
 <br>
 <h5>The processing of the data follows the next steps:</h5>
 <ol>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>Create the dataset with pandas and format the dataframe</li>
+    <li>Split in Train and Test set</li>
+    <li>Imput the NA values with the mean for each category</li>
+    <li>LASSO Model for Variable Selection</li>
+    <li>Filter the data with the selected parameters</li>
+    <li>Normalize the data and perform PCA to reduce the dimension to two</li>
+    <li>Plot the data before training</li>
 </ol>
 <p>After processing the data, looks like now is linearly separable.</p>
-<img href="">
+<img class="img-fluid" src="{{url_for('static', filename='plotsvm.png')}}">
+<p>The last step is train the SVM model and generate the metrics for asses the genealization of the model</p>
+<br>
+<h5>Metrics for the SVM classification problem</h5>
+<p>
 
+</p>
 <h3>LOREM IPSUM</h3>
 {% endblock %}
 
