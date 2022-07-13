@@ -66,3 +66,8 @@ def neuralnet():
 @app.route("/about")
 def about():
     return render_template("about.html")
+
+
+@app.route('/favicon.ico')
+def fav():
+    return app.send_static_file('favicon.ico')
