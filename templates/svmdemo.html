@@ -7,7 +7,7 @@ Support-Vector Machine: Demo
 {% endblock %}
 
 {% block subtitle %}
-Dataset: Hepatitis C <a href="https://archive.ics.uci.edu/ml/datasets/HCV+data">[0]</a>
+Dataset: Hepatitis C <a href="https://archive.ics.uci.edu/ml/datasets/HCV+data" target="_external">[0]</a>
 {% endblock %}
 
 {% block model_content %}
@@ -15,33 +15,33 @@ Dataset: Hepatitis C <a href="https://archive.ics.uci.edu/ml/datasets/HCV+data">
     {{template_form.hidden_tag()}}
     <p>
         {{template_form.CHL.label}}
-        {{template_form.CHL()}}
+        {{template_form.CHL(placeholder="mmol/L")}}
     </p>
     <p>
         {{template_form.CHE.label}}
-        {{template_form.CHE()}}
+        {{template_form.CHE(placeholder="U/mL")}}
     </p>
     <p>
         {{template_form.ALB.label}}
-        {{template_form.ALB()}}
+        {{template_form.ALB(placeholder="g/L")}}
     </p>
     <p>
         {{template_form.ALP.label}}
-        {{template_form.ALP()}}
+        {{template_form.ALP(placeholder="IU/L")}}
     </p>
     <p>
         {{template_form.PRO.label}}
-        {{template_form.PRO()}}
+        {{template_form.PRO(placeholder="g/L")}}
     </p>
     <p>
         {{template_form.AST.label}}
-        {{template_form.AST()}}
+        {{template_form.AST(placeholder="IU/L")}}
     </p>
     <p>{{template_form.BIL.label}}
-        {{template_form.BIL()}}</p>
+        {{template_form.BIL(placeholder="umol/L")}}</p>
     <p>
         {{template_form.Age.label}}
-        {{template_form.Age()}}
+        {{template_form.Age(placeholder="Years")}}
     </p>
 
     <p>
