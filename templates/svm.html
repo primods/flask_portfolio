@@ -16,9 +16,40 @@ Dataset: Hepatitis C <a href="https://www.kaggle.com/datasets/fedesoriano/hepati
 </h4>
 <br>
 <p>
-    
+    The data is multi-labeled, but for the purposes of the model, is going to be encoded to make it a binary classification problem. The data is unbalanced, so F1-Score for evaluation would be used as primary metrics along with the corresponding confussion matrix. The data is highly dimentional, and for the purposes of the analysis a Principal Component Analysis would be fitted for the data.
 </p>
+<p>
+    The language used to perform the analysis and create the model is Python. And the libraries used for the task are:
+    <ul>
+        <li>Matplotlib and Seaborn for plot the data </li>
+        <li>Numpy and Pandas for data manipulation</li>
+        <li>Sklearn to train the model and measure the F1-Score</li>
+        <li>Mlxtend for plot the boundary limits</li>
+    </ul>
+</p>
+<h5>About the data:</h5>
+<p>
+    The dataset consists of laboratory measurements with 615 entries and 12 parameters plus a class label. The units of the data are mostly in g/L. The parameter are:
+    <ul>
+       <li>Category: Nominal value, indicates the status of the patient</li>
+       <li>Age: Numerical discrete value</li>
+       <li>Sex: Categorical value (m for male and f for female)</li>
+       <li>ALB: Albumin (Most important protein in the body; transport and liquid pressure function)</li>
+       <li>ALP: Alkaline Phosphatase (Enzime of the bones and liver, increases in inflamatory diseases)</li>
+       <li>ALT: Alanine aminotransferase (Functional enzyme of the liver)</li>
+       <li>AST: Aspartate aminotransferase: (Functional enzyme of the liver)</li>
+       <li>BIL: Bilirrubin (Indicates liver disease associated with the gallbladder)</li>
+       <li>CHE: Cholinesterase (Hepatic enzyme)</li>
+       <li>CHOL: Cholesterol (Energetic and structure biomolecule free in blood)</li>
+       <li>CREA: Creatinine (Mostly a biomarker of renal disease)</li>
+       <li>GGT: Gamma-glutamyl transferase (Another enzime that indicates liver function and gallblader diseases)</li>
+       <li>PROT: Total proteins in serum</li>   
+    </ul>
+</p>
+<p>More details for this dataset could be found in the <a href="#">EDA Analysis.</a></p>
 
+
+<h3>LOREM IPSUM</h3>
 {% endblock %}
 
 {% block card_header %}
